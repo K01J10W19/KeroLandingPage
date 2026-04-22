@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors derived from the landscape demo */
+  --color-bg-primary: #0a0c0b;
+  --color-text-main: #f8fafc;
+  --color-text-muted: #cbd5e1;
+  --color-accent: #ffffff;
+  
+  /* Typography */
+  --font-heading: "Hedvig Letters Serif", serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Custom Fluid Breakpoints */
+  --breakpoint-xs: 320px;
+  --breakpoint-sm-phone: 390px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-3xl: 1920px;
+
+  /* Spacing: Ensuring multiples of 4/8 are the default */
+  --spacing-fluid-sm: clamp(1rem, 2vw, 1.5rem);
+  --spacing-fluid-md: clamp(2rem, 5vw, 4rem);
+  --spacing-fluid-lg: clamp(4rem, 10vw, 8rem);
+
+  /* Vertical Section Spacing (Multiples of 8) */
+  --spacing-section-y: clamp(2rem, 8vw, 12rem); 
+  --spacing-feature-gap: clamp(2rem, 8vw, 8rem);
+}
+
+.vignette-mask {
+  mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 10%, transparent 80%);
+  -webkit-mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, black 10%, transparent 80%);
+}
+
+@media (min-width: 1280px) { 
+  .vignette-mask {
+    /* Made the ellipse larger: 75% 75% */
+    mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 10%, transparent 80%);
+    -webkit-mask-image: radial-gradient(ellipse 75% 75% at 50% 50%, black 10%, transparent 80%);
+  }
+}
